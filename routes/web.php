@@ -23,11 +23,3 @@ Route::get('/booksform', function () {
     return view('create_book');
 });
 
-Route::post('/books', function () {
-    $book = new Book();
-    $book->title = request('title');
-    $book->author = request('author');
-    $book->blurb = request('blurb');
-    $book->genre = request('genre');
-    $book->save();
-});
